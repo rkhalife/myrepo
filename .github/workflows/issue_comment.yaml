@@ -11,3 +11,10 @@ jobs:
       - name: "dumb github context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+
+      - name: Create or Update Comment
+        uses: peter-evans/create-or-update-comment@v4.0.0
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: "This is a comment and I'm using **Markdown** :sparkles:"
+          
