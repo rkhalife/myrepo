@@ -16,5 +16,9 @@ jobs:
         uses: peter-evans/create-or-update-comment@v4.0.0
         with:
           issue-number: ${{ github.event.issue.number }}
-          body: "This is a comment and I'm using **Markdown** :sparkles:"
+          body: |
+            This is a multi-line test comment
+            - With Github ""Markdown** :sparkles:
+            - Created by Nobody
+          reactions: '+1'
           
